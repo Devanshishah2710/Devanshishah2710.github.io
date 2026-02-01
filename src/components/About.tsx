@@ -5,7 +5,7 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 const About = () => {
   const skills = [
     { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript'] },
-    { category: 'Backend', items: ['Node.js', 'Express', 'MongoDB', 'REST APIs'] },
+    { category: 'Backend', items: ['Node.js', 'REST APIs'] },
     { category: 'Tools', items: ['GitHub', 'VS Code', 'Figma', 'Vite'] }
   ];
 

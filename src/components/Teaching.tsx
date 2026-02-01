@@ -30,7 +30,7 @@ const Teaching = () => {
     }
   ];
 
-  const testimonials = [
+ const testimonials = [
     {
       name: 'Arjun Patel',
       role: 'BCA Student',
@@ -49,7 +49,7 @@ const Teaching = () => {
       content: 'Switching careers felt overwhelming, but Devanshi\'s structured approach helped me land my first developer job!',
       rating: 5
     }
-  ];
+  ]; 
 
   const topics = [
     'HTML & CSS Fundamentals',
@@ -63,7 +63,7 @@ const Teaching = () => {
   return (
     <section id="teaching" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
+        {/* Section Header }
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Teaching & <span className="text-gradient">Mentoring</span>
