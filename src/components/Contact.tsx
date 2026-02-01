@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Instagram, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -42,49 +42,35 @@ const Contact = () => {
     {
       icon: <Github className="w-6 h-6" />,
       label: 'GitHub',
-      url: 'https://github.com',
+      url: 'https://devanshishah2710.github.io',
       color: 'hover:text-gray-900'
     },
-    {
-      icon: <Linkedin className="w-6 h-6" />,
-      label: 'LinkedIn',
-      url: 'https://linkedin.com',
-      color: 'hover:text-blue-600'
-    },
-    {
-      icon: <Instagram className="w-6 h-6" />,
-      label: 'Instagram',
-      url: 'https://instagram.com',
-      color: 'hover:text-pink-500'
-    },
-    {
-      icon: <Youtube className="w-6 h-6" />,
-      label: 'YouTube',
-      url: 'https://youtube.com',
-      color: 'hover:text-red-500'
-    }
+   
   ];
 
   const contactInfo = [
-    {
-      icon: <Mail className="w-6 h-6" />,
-      label: 'Email',
-      value: 'devanshi.shah@email.com',
-      action: 'mailto:devanshi.shah@email.com'
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      label: 'Phone',
-      value: '+91 98765 43210',
-      action: 'tel:+919876543210'
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      label: 'Location',
-      value: 'Jamnagar, Gujarat, India',
-      action: null
-    }
-  ];
+   
+  {
+    icon: <Phone className="w-6 h-6" />,
+    label: 'Contact',
+    value: '6355533422',
+    action: 'tel:6355533422'
+  },
+  {
+    icon: <Mail className="w-6 h-6" />,
+    label: 'Email',
+    value: 'shahdevanshi2710@gmail.com',
+    action: 'mailto:shahdevanshi2710@gmail.com'
+  },
+  {
+    icon: <MapPin className="w-6 h-6" />,
+    label: 'Location',
+    value: 'Jamnagar, Gujarat, India',
+    action: null
+  }
+];
+
+  
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
@@ -107,7 +93,18 @@ const Contact = () => {
                 Send me a message
               </h3>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSd6R5moG49SKTqBPd-TUDanj6RieM4VFmjXyH7chwCwGxjt0Q/viewform?embedded=true"
+                    width="100%"
+                    height={900}            // number in JSX
+                    frameBorder={0}         // camelCase
+                    marginHeight={0}        // camelCase
+                    marginWidth={0}         // camelCase
+                    scrolling="yes"
+                    title="Contact Form"
+                  />
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Your Name
