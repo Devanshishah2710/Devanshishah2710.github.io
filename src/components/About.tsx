@@ -63,14 +63,13 @@ const About = () => {
             
             <div className="space-y-4 text-lg leading-relaxed">
               <p>
-                Hi! I'm Devanshi, a passionate web developer from Jamnagar pursuing my BCA at H.J. Doshi. 
-                I love the intersection where creativity meets logic, crafting digital experiences that 
-                users genuinely enjoy.
+                Hi, I’m Devanshi! A web developer passionate about crafting user-friendly 
+                and visually appealing websites. I’ve completed my BCA from H.J. Doshi 
+                and am currently expanding my knowledge with an MCA at Haria College.
               </p>
               <p>
-                Beyond coding, I'm deeply passionate about teaching and sharing knowledge. I believe 
-                the best way to master something is to teach it, and I love helping others discover 
-                the joy of programming.
+               Beyond coding, I'm deeply passionate about teaching and sharing knowledge. 
+               I believe the best way to master something is to teach it, and I love helping others discover the joy of programming.
               </p>
             </div>
           </div>

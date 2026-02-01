@@ -51,7 +51,7 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="fade-in-up">
           <h1 className="text-6xl md:text-8xl font-display font-bold mb-6">
-            Hi, I'm <span className="text-gradient">Devanshi</span> 👋
+            Hi, I'm <span className="text-gradient">Devanshi</span> 😊
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -69,13 +69,14 @@ const Hero = () => {
             </Button>
             
             <Button 
-              onClick={downloadResume}
-              variant="outline"
-              className="btn-secondary group"
-            >
-              <Download className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-              Download Resume
-            </Button>
+  onClick={downloadResume}
+  variant="outline"
+  className="btn-secondary group bg-blue-600 text-white border-blue-600 hover:bg-blue-700 hover:text-white"
+>
+  <Download className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
+  Download Resume
+</Button>
+
           </div>
 
           <div className="text-sm text-muted-foreground animate-bounce">
