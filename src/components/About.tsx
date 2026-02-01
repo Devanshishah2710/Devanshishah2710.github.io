@@ -60,7 +60,7 @@ const About = () => {
                 👩‍💻
               </div>
             </div>
-            
+          
             <div className="space-y-4 text-lg leading-relaxed">
               <p>
                 Hi, I’m Devanshi! A web developer passionate about crafting user-friendly 
