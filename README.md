@@ -17,4 +17,4 @@ This project is built using:
 - **Framer Motion** (for animations)
 - **Responsive Design Principles**
 
----test commit
+---
