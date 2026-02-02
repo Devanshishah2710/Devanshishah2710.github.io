@@ -8,30 +8,31 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) => { setFormData({ ...formData, [e.target.name]: e.target.value
+   }); 
   };
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formUrl =
-      "https://docs.google.com/forms/d/e/1FAIpQLSd6R5moG49SKTqBPd-TUDanj6RieM4VFmjXyH7chwCwGxjt0Q/formResponse";
-    const formDataToSend = new URLSearchParams();
-    formDataToSend.append("entry.215113095", formData.name);
-    formDataToSend.append("entry.555009309", formData.email);
-    formDataToSend.append("entry.1015730987", formData.message);
-    try {
-      await fetch(formUrl, {
-        method: "POST",
-        mode: "no-cors",
-        body: formDataToSend,
-      });
-      alert("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error(error);
-      alert("Failed to send message.");
-    }
-  };
+  e.preventDefault();
+  const formUrl =
+    "https://docs.google.com/forms/d/e/1FAIpQLSd6R5moG49SKTqBPd-TUDanj6RieM4VFmjXyH7chwCwGxjt0Q/formResponse";
+  const formDataToSend = new URLSearchParams();
+  formDataToSend.append("entry.215113095", formData.name);
+  formDataToSend.append("entry.555009309", formData.email);
+  formDataToSend.append("entry.1015730987", formData.message);
+  try {
+    await fetch(formUrl, {
+      method: "POST",
+      mode: "no-cors",
+      body: formDataToSend,
+    });
+    alert("Message sent successfully!");
+    setFormData({ name: "", email: "", message: "" });
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send message.");
+  }
+};
+
 const socialLinks = [
   {
     icon: <Github className="w-6 h-6" />,
