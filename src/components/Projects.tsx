@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Code, Palette, Smartphone } from 'lucide-react';
+import { ExternalLink, Github, Code, Palette } from 'lucide-react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -6,59 +6,23 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured online shopping platform with user authentication, cart functionality, and payment integration.',
-      tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      icon: <Smartphone className="w-6 h-6" />,
-      demoUrl: '#',
-      githubUrl: '#',
-      image: '🛍️'
-    },
-    {
-      title: 'Task Management App',
-      description: 'Collaborative task management tool with real-time updates, team collaboration, and progress tracking.',
-      tags: ['TypeScript', 'React', 'Firebase', 'Tailwind'],
-      icon: <Code className="w-6 h-6" />,
-      demoUrl: '#',
-      githubUrl: '#',
-      image: '📋'
-    },
-    {
       title: 'Portfolio Website',
-      description: 'Responsive portfolio website showcasing creative design and smooth animations with modern web technologies.',
-      tags: ['HTML', 'CSS', 'JavaScript', 'GSAP'],
+      description:
+        'Responsive portfolio website showcasing creative design and smooth animations with modern web technologies.',
+      tags: ['HTML', 'CSS', 'JavaScript'],
       icon: <Palette className="w-6 h-6" />,
-      demoUrl: '#',
-      githubUrl: '#',
-      image: '🎨'
+      githubUrl: 'https://devanshishah2710.github.io/',
+      image: '🎨',
     },
     {
-      title: 'Learning Management System',
-      description: 'Educational platform for online courses with video streaming, quizzes, and progress tracking for students.',
-      tags: ['React', 'Express', 'PostgreSQL', 'AWS'],
+      title: 'E-Medicine services',
+      description:
+        'A digital e-medicine management system designed for medical stores to manage medicine stock, customer orders, billing, and customer details online, replacing manual record-keeping.',
+      tags: ['React', 'Node.js', 'Medical Store'],
       icon: <Code className="w-6 h-6" />,
-      demoUrl: '#',
-      githubUrl: '#',
-      image: '📚'
+      image: '💊',
+      downloadUrl: '/3464a63d-638f-4fdd-b900-442cecc4daec.zip',
     },
-    {
-      title: 'Weather Dashboard',
-      description: 'Interactive weather application with location-based forecasts, charts, and beautiful UI components.',
-      tags: ['Vue.js', 'Chart.js', 'API Integration'],
-      icon: <Smartphone className="w-6 h-6" />,
-      demoUrl: '#',
-      githubUrl: '#',
-      image: '🌤️'
-    },
-    {
-      title: 'Blog Platform',
-      description: 'Modern blogging platform with markdown support, comments system, and social media integration.',
-      tags: ['Next.js', 'MDX', 'Prisma', 'Vercel'],
-      icon: <Palette className="w-6 h-6" />,
-      demoUrl: '#',
-      githubUrl: '#',
-      image: '✍️'
-    }
   ];
 
   return (
@@ -77,32 +41,35 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="card-hover group">
-              <CardContent className="p-6">
-                {/* Project Icon/Image */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-6xl">{project.image}</div>
+            <Card key={index} className="card-hover group flex flex-col h-full">
+              <CardContent className="p-6 flex flex-col flex-1">
+                {/* Image / Icon */}
+                <div className="flex items-center justify-between mb-4 h-20">
+                  <div className="text-6xl flex items-center justify-center w-20 h-20">
+                    {project.image}
+                  </div>
                   <div className="text-primary opacity-60 group-hover:opacity-100 transition-opacity">
                     {project.icon}
                   </div>
                 </div>
 
-                {/* Project Details */}
+                {/* Title */}
                 <h3 className="text-xl font-display font-semibold mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                
+
+                {/* Description */}
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mt-auto">
                   {project.tags.map((tag, tagIndex) => (
-                    <Badge 
-                      key={tagIndex} 
-                      variant="secondary" 
-                      className="text-xs bg-accent/20 hover:bg-accent/30"
+                    <Badge
+                      key={tagIndex}
+                      variant="secondary"
+                      className="bg-accent/20 text-accent-foreground text-xs transition-colors hover:bg-accent/40"
                     >
                       {tag}
                     </Badge>
@@ -110,36 +77,41 @@ const Projects = () => {
                 </div>
               </CardContent>
 
-              <CardFooter className="px-6 pb-6 pt-0 flex gap-3">
-                <Button 
-                  size="sm" 
-                  className="flex-1 group/btn"
-                  onClick={() => window.open(project.demoUrl, '_blank')}
-                >
-                  <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                  Live Demo
-                </Button>
-                
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="flex-1 group/btn"
-                  onClick={() => window.open(project.githubUrl, '_blank')}
-                >
-                  <Github className="w-4 h-4 mr-2 group-hover/btn:rotate-12 transition-transform" />
-                  Code
-                </Button>
+              {/* Footer */}
+              <CardFooter className="pt-0 mt-4 flex items-center gap-3">
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-1 text-sm font-medium text-white bg-indigo-500 py-2 rounded-md hover:bg-indigo-600 transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    Visit Site
+                  </a>
+                )}
+
+                {project.downloadUrl && (
+                  <a
+                    href={project.downloadUrl}
+                    download="E-Medicine Services.zip"
+                    className="flex-1 flex items-center justify-center gap-1 text-sm font-medium text-white bg-indigo-500 py-2 rounded-md hover:bg-indigo-600 transition-colors"
+                  >
+                    <Code className="w-4 h-4" />
+                    Download
+                  </a>
+                )}
               </CardFooter>
             </Card>
           ))}
         </div>
 
-        {/* CTA Section */}
+        {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-lg text-muted-foreground mb-6">
             Interested in collaborating on a project?
           </p>
-          <Button 
+          <Button
             className="btn-hero group"
             onClick={() => {
               const element = document.querySelector('#contact');

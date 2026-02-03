@@ -50,26 +50,26 @@ const About = () => {
           <div className="text-center lg:text-left">
             <div className="relative inline-block mb-8">
               <div className="w-64 h-64 mx-auto lg:mx-0 rounded-full overflow-hidden shadow-2xl border-4 border-card">
-                <img 
-                  src={profilePhoto} 
+                <img
+                  src={profilePhoto}
                   alt="Devanshi Shah"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-[50%_20%]"
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl animate-bounce">
                 👩‍💻
               </div>
             </div>
-          
+
             <div className="space-y-4 text-lg leading-relaxed">
               <p>
-                Hi, I’m Devanshi! A web developer passionate about crafting user-friendly 
-                and visually appealing websites. I’ve completed my BCA from H.J. Doshi 
+                Hi, I’m Devanshi! A web developer passionate about crafting user-friendly
+                and visually appealing websites. I’ve completed my BCA from H.J. Doshi
                 and am currently expanding my knowledge with an MCA at Haria College.
               </p>
               <p>
-               Beyond coding, I'm deeply passionate about teaching and sharing knowledge. 
-               I believe the best way to master something is to teach it, and I love helping others discover the joy of programming.
+                Beyond coding, I'm deeply passionate about teaching and sharing knowledge.
+                I believe the best way to master something is to teach it, and I love helping others discover the joy of programming.
               </p>
             </div>
           </div>
@@ -77,7 +77,7 @@ const About = () => {
           {/* Skills Section */}
           <div className="space-y-6">
             <h3 className="text-2xl font-display font-semibold mb-6">Skills & Technologies</h3>
-            
+
             {skills.map((skillGroup, index) => (
               <Card key={index} className="card-hover">
                 <CardContent className="p-6">
@@ -86,7 +86,7 @@ const About = () => {
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((skill, skillIndex) => (
-                      <span 
+                      <span
                         key={skillIndex}
                         className="px-3 py-1 bg-accent/20 text-accent-foreground rounded-full text-sm font-medium"
                       >

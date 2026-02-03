@@ -3,34 +3,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const Teaching = () => {
-  const achievements = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      number: '50+',
-      label: 'Students Mentored',
-      description: 'Guided students in web development fundamentals'
-    },
-    {
-      icon: <BookOpen className="w-8 h-8" />,
-      number: '15+',
-      label: 'Workshops Conducted',
-      description: 'Interactive coding sessions and tutorials'
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      number: '4.9/5',
-      label: 'Average Rating',
-      description: 'Consistent positive feedback from learners'
-    },
-    {
-      icon: <Star className="w-8 h-8" />,
-      number: '100%',
-      label: 'Completion Rate',
-      description: 'Students successfully complete courses'
-    }
-  ];
-
- const testimonials = [
+  const testimonials = [
     {
       name: 'Arjun Patel',
       role: 'BCA Student',
@@ -49,7 +22,7 @@ const Teaching = () => {
       content: 'Switching careers felt overwhelming, but Devanshi\'s structured approach helped me land my first developer job!',
       rating: 5
     }
-  ]; 
+  ];
 
   const topics = [
     'HTML & CSS Fundamentals',
@@ -63,7 +36,7 @@ const Teaching = () => {
   return (
     <section id="teaching" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header }
+        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
             Teaching & <span className="text-gradient">Mentoring</span>
@@ -71,28 +44,6 @@ const Teaching = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Sharing knowledge and empowering the next generation of developers
           </p>
-        </div>
-
-        {/* Achievement Stats */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {achievements.map((achievement, index) => (
-            <Card key={index} className="card-hover text-center group">
-              <CardContent className="p-6">
-                <div className="text-primary mb-4 flex justify-center group-hover:scale-110 transition-transform">
-                  {achievement.icon}
-                </div>
-                <div className="text-3xl font-display font-bold text-gradient mb-2">
-                  {achievement.number}
-                </div>
-                <h4 className="font-semibold text-lg mb-2">
-                  {achievement.label}
-                </h4>
-                <p className="text-muted-foreground text-sm">
-                  {achievement.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
@@ -124,27 +75,28 @@ const Teaching = () => {
               <CardContent className="p-6">
                 <div className="space-y-4 text-lg leading-relaxed">
                   <p>
-                    🎯 <strong>Learn by Doing:</strong> I believe in hands-on learning with real projects 
-                    that students can showcase in their portfolios.
+                    💻 <strong>Industry-Relevant Skills:</strong> I focus on teaching technologies and practices that are actively used in the industry so students can immediately contribute to real projects.
                   </p>
                   <p>
-                    🤝 <strong>Patient Guidance:</strong> Everyone learns at their own pace. I provide 
-                    personalized support to help each student succeed.
+                    🎯 <strong>Build Real Projects:</strong> Hands-on learning with actual applications, portfolios, and GitHub-ready projects that reflect real-world developer experience.
                   </p>
                   <p>
-                    💡 <strong>Practical Skills:</strong> Focus on industry-relevant skills that students 
-                    can immediately apply in their careers.
+                    🤝 <strong>Collaborative Approach:</strong> Encouraging teamwork, code reviews, and collaborative problem-solving to mimic professional development environments.
                   </p>
                   <p>
-                    🌱 <strong>Growth Mindset:</strong> Encouraging curiosity and continuous learning 
-                    beyond the classroom.
+                    💡 <strong>Practical Problem Solving:</strong> Teaching students to break down complex problems, debug effectively, and implement efficient solutions like a professional developer.
+                  </p>
+                  <p>
+                    🌱 <strong>Growth Mindset:</strong> Emphasizing continuous learning, curiosity, and adaptability to keep up with evolving technologies.
+                  </p>
+                  <p>
+                    🛠️ <strong>Tool Mastery:</strong> Guidance on using essential developer tools like Git, VS Code, npm, browser dev tools, and deployment practices.
                   </p>
                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
-
         {/* Testimonials */}
         <div className="mb-16">
           <h3 className="text-2xl font-display font-semibold text-center mb-8">
@@ -160,11 +112,11 @@ const Teaching = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  
+
                   <p className="text-muted-foreground mb-4 italic">
                     "{testimonial.content}"
                   </p>
-                  
+
                   <div>
                     <p className="font-semibold">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
@@ -181,10 +133,10 @@ const Teaching = () => {
             Want to Learn Together?
           </h3>
           <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Whether you're a complete beginner or looking to advance your skills, 
+            Whether you're a complete beginner or looking to advance your skills,
             I'd love to help you on your coding journey.
           </p>
-          <Button 
+          <Button
             className="btn-hero group"
             onClick={() => {
               const element = document.querySelector('#contact');
